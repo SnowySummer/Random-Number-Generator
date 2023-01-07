@@ -1,12 +1,11 @@
-# rng
+# Random Number Generator
 
 ## About
 
-This module concerns itself with generating random number.
+This repo contains a compilation of random number generators.
 
-## Features
-- Generate from LCG
-- Generate from LFSR
+## RNG
 
-## Working on
-- Test with some random test suites
+Here are the currently implemented rng:
+- Linear congrential generator
+- Linear feedback shift register
