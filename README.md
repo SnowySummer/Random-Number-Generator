@@ -1,4 +1,4 @@
-# qlib_rng
+# rng
 
 ## About
 
