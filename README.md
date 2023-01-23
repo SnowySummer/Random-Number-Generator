@@ -2,7 +2,7 @@
 
 ## About
 
-This repo contains a compilation of random number generators.
+A C library containing a compilation of random number generators.
 
 ## RNG
 
