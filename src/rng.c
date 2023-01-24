@@ -44,7 +44,8 @@ static uint8_t lfsr_gen(){
     uint8_t bit = seed & 1;
 
     for (int i = 0; i < 64; i++){
-        bit ^= (seed >> i) & ((lfsr_poly >> i) & 1);
+        if ((lfsr_poly >> i) & 1)
+            bit ^= (seed >> i);
     }
     bit &= 1;
     seed = seed >> 1 | (((uint64_t)bit << 63));
@@ -53,7 +54,7 @@ static uint8_t lfsr_gen(){
 uint32_t rng_lfsr32_gen(){
     uint32_t num = 0;
     for (int i = 0; i < 32; i++){
-        num = num << 1 | lfsr_gen();
+        num |= lfsr_gen() << i;
     }
     return num;
 }
